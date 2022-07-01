@@ -1,6 +1,8 @@
 # Desafio Blitz
 
-## Descrição 
+## Descrição
+
+Aplicação onde se é possível ter uma melhor organização de suas tarefas individuais. Podendo adicionar, editar e excluir as tarefas de um banco de dados, se tornando mais produtivo.
 
 ## Status do projeto
 ### Front-End
