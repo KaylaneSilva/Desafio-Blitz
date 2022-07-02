@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Status.associate = (models) => {
-    Status.hasMany(models.tasks, { foreignKey: 'status', as:'tasks'})
+    Status.hasMany(models.Task, { foreignKey: 'status_type', as:'tasks'})
   }
 
   return Status;

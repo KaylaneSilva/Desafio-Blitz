@@ -11,7 +11,7 @@ module.exports = {
       description: {
         type: Sequelize.STRING
       },
-      status: {
+      status_type: {
         type: Sequelize.INTEGER,
         allowNull: false,
         references: {

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-  const Task = sequelize.define('Tasks', {
+  const Task = sequelize.define('Task', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    status: {
+    status_type: {
       type: DataTypes.INTEGER,
       foreignKey: true,
       allowNull: false
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
   });
 
   Task.associate = (models) => {
-    Task.belongsTo(models.Status, { foreignKey: 'status', as:'status'})
+    Task.belongsTo(models.Status, { foreignKey: 'status_type', as:'status'})
   }
 
   return Task;
