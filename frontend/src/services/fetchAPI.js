@@ -20,3 +20,13 @@ export const addTask = async (task) => {
 
   fetch(url, send);
 };
+
+export const deleteTask = (id) => {
+  const url = `http://localhost:3000/task/${id}`;
+
+  const send = {
+    method: 'DELETE',
+  };
+
+  fetch(url, send);
+};
