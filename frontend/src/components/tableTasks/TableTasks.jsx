@@ -15,7 +15,7 @@ function TableTask (props) {
     <section>
       { tasks
       ? (
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Tarefa</th>
@@ -23,7 +23,7 @@ function TableTask (props) {
               <th>Criado em</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="table-group-divider">
             { tasks && tasks.map((task) => {
               const { id, description, status, createdAt } = task;
 
