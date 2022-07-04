@@ -1,15 +1,21 @@
 import React, { useState, useEffect } from "react";
-import { getTasks } from "../../services/fetchAPI";
+import { getTasks, deleteTask } from "../../services/fetchAPI";
 
 function TableTask (props) {
   const [ tasks, setTasks ] = useState([]);
-  const { reload } = props;
+  const [ exclude, setExclude ] = useState(false)
+  const { reload, setReload } = props;
 
   useEffect(() => {
     getTasks().then((data) => setTasks(data));
-  }, [reload])
+    setExclude(false);
+    setReload(false);
+  }, [reload, exclude, setReload])
 
-  console.log(tasks)
+  const handleClick = (id) => {
+    deleteTask(id);
+    setExclude(true);
+  } 
 
   return (
     <section>
@@ -37,6 +43,15 @@ function TableTask (props) {
                   <td>{ description }</td>
                   <td>{ status.name }</td>
                   <td>{ formatedDate }</td>
+                  <td>
+                    <button
+                      type="button"
+                      className="btn btn-secondary"
+                      onClick={ () => handleClick(id) }
+                    >
+                      Excluir
+                    </button>
+                  </td>
                 </tr>
               )
             })}
