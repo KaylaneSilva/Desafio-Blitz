@@ -15,7 +15,7 @@ function App() {
         className="container"
       >
         <Forms reload={ reload } setReload={ setReload } />
-        <TableTask reload={ reload } />
+        <TableTask reload={ reload } setReload= { setReload } />
       </section>
     </main>
   );
