@@ -29,6 +29,7 @@ function TableTask (props) {
 
               const date = new Date(createdAt);
 
+              // Site consultado: https://blog.betrybe.com/javascript/javascript-date-format/
               const formatedDate = ((date.getDate() )) + "/" + ((date.getMonth() + 1)) + "/" + date.getFullYear();
 
               return (
