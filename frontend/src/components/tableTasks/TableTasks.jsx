@@ -27,11 +27,15 @@ function TableTask (props) {
             { tasks && tasks.map((task) => {
               const { id, description, status, createdAt } = task;
 
+              const date = new Date(createdAt);
+
+              const formatedDate = ((date.getDate() )) + "/" + ((date.getMonth() + 1)) + "/" + date.getFullYear();
+
               return (
                 <tr key={ id }>
                   <td>{ description }</td>
                   <td>{ status.name }</td>
-                  <td>{ createdAt }</td>
+                  <td>{ formatedDate }</td>
                 </tr>
               )
             })}
