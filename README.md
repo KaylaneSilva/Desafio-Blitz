@@ -15,23 +15,38 @@ Aplicação onde se é possível ter uma melhor organização de suas tarefas in
 
 ## Utilizar / Rodar o projeto
 
-### 1 - Baixar/Inicializar depedências
+### Baixar/Inicializar depedências
   #### Docker
   ```
     docker compose up
   ```
 
   #### Local
+  
+  ##### Front-end
+  1 - Indo para o diretório de Front-end
+  ```
+    cd frontend
+  ```
+  2 - Instalando dependências
   ```
     npm install
   ```
-
-### 2 - Rodar projeto
-  #### Front-end
+  3 - Rodando projeto
   ```
     npm start
   ```
-  #### Back-end
+  
+  ##### Back-end
+  1 - Indo para o diretório de Back-end
+  ```
+    cd backend
+  ```
+  2 - Instalando dependências
+  ```
+    npm install
+  ```
+  3 - Rodando projeto
   ```
     npm run dev
   ```
