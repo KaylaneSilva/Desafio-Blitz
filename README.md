@@ -46,7 +46,11 @@ Aplicação onde se é possível ter uma melhor organização de suas tarefas in
   ```
     npm install
   ```
-  3 - Rodando projeto
+   3 - Criando database e populando tabelas
+  ```
+    npm run prestart && npm run seed
+  ```
+  4 - Rodando projeto
   ```
     npm run dev
   ```
