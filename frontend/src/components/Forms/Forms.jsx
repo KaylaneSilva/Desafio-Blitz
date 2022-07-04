@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { addTask } from "../../services/fetchAPI";
+import './Forms.css';
 
 function Forms (props) {
   const [ description, setDescription ] = useState('');
@@ -31,46 +32,65 @@ function Forms (props) {
   };
   
   return (
-    <section>
-      <form onSubmit={(event) => handleSubmit(newTask, event)}>
-        <label
-          htmlFor="Description"
-        >
-          Descrição:
+    <section
+      className="sectionForm"
+    >
+      <form
+        className="divForm"
+        onSubmit={(event) => handleSubmit(newTask, event)}
+      >
+        <div>
+          <label
+            htmlFor="Description"
+            className="input-group"
+          >
+            Descrição:
+          </label>
           <input
             name="Description"
             type="text"
             value={description}
+            className="form-control"
             onChange={ ({ target }) => setDescription(target.value) }
             required
           />
-        </label>
-        <select
-          name="Status"
-          value={ status }
-          onChange={ ({ target }) => setStatus(target.value) }
-          required
-        >
-          <option
-            value='1'
+        </div>
+        <div>
+        <label
+            htmlFor="Status"
+            className="input-group"
           >
-            Pendente
-          </option>
-          <option
-            value='2'
+            Status:
+          </label>
+            <select
+            name="Status"
+            value={ status }
+            onChange={ ({ target }) => setStatus(target.value) }
+            className="form-select"
+            required
           >
-            Em andamento
-          </option>
-          <option
-            value='3'
-          >
-            Pronto
-          </option>
-        </select>
+            <option
+              value='1'
+            >
+              Pendente
+            </option>
+            <option
+              value='2'
+            >
+              Em andamento
+            </option>
+            <option
+              value='3'
+            >
+              Pronto
+            </option>
+          </select>
+        </div>       
         <button
           type="submit"
+          className="btn btn-primary"
         >
-
+          Adicionar tarefa
         </button>
       </form>
     </section>
