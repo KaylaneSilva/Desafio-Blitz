@@ -1,7 +1,9 @@
-const { Task } = require('../database/models');
+const { Task, Status } = require('../database/models');
 
 const getTasks = async () => {
-  const tasks = await Task.findAll();
+  const tasks = await Task.findAll({ include: 
+    { model: Status, as: 'status' },
+  });
   return tasks;
 };
 
