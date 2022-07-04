@@ -18,17 +18,17 @@ function Forms (props) {
     setDescription('');
   }, [reload])
 
-  const handleSubmit = (task, event) => {
-    event.preventDefault();
-    addTask(task);
-    setReload(true);
-  };
+  const handleSubmit = (event) => {
+    const newTask = {
+      description,
+      status_type: status,
+      createdAt: newDate,
+      updatedAt: newDate,
+    };
 
-  const newTask = {
-    description,
-    status_type: status,
-    createdAt: newDate,
-    updatedAt: newDate,
+    event.preventDefault();
+    setReload(true);
+    addTask(newTask);
   };
   
   return (
@@ -37,7 +37,7 @@ function Forms (props) {
     >
       <form
         className="divForm"
-        onSubmit={(event) => handleSubmit(newTask, event)}
+        onSubmit={handleSubmit}
       >
         <div>
           <label
