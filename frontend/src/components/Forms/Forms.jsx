@@ -27,9 +27,12 @@ function Forms (props) {
     };
 
     event.preventDefault();
-    setReload(true);
     addTask(newTask);
   };
+
+  const handleClick = () => {
+    setReload(true);
+  }
   
   return (
     <section
@@ -89,6 +92,7 @@ function Forms (props) {
         <button
           type="submit"
           className="btn btn-primary"
+          onClick={ handleClick }
         >
           Adicionar tarefa
         </button>
