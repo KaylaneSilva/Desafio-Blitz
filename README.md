@@ -10,6 +10,10 @@ Aplicação onde se é possível ter uma melhor organização de suas tarefas in
 ### Back-end
   > :construction: Projeto em construção :construction:
 
+## Features
+  - Adicionar uma tarefa nova.
+  - Remover uma tarefa.
+
 ## Tecnologias usadas
 [![My Skills](https://skills.thijs.gg/icons?i=docker,js,nodejs,mysql,react&theme=dark)](https://skills.thijs.gg)
 
@@ -54,3 +58,8 @@ Aplicação onde se é possível ter uma melhor organização de suas tarefas in
   ```
     npm run dev
   ```
+  
+  ## ⭐Importante
+  
+  A aplicação de Back-end deve estar rodando para que as features do Front-end funcionem.
+  
